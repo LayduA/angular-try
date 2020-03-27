@@ -1,0 +1,6 @@
+<div *ngFor = "let f of film_list">
+  <button (click)="search(f.title)">{{f.title}}</button>
+</div>
+<div *ngIf = "film_searched.length > 0">
+  <p> Le film cherché est {{film_searched}} </p>
+</div>
