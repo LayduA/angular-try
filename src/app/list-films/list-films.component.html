@@ -2,5 +2,21 @@
   <button (click)="search(f.title)">{{f.title}}</button>
 </div>
 <div *ngIf = "film_searched.length > 0">
-  <p> Le film cherché est {{film_searched}} </p>
+  <p> Le film cherché est <b>{{film_searched}}</b>. </p>
+</div>
+<div *ngIf = "film_toshow != null">
+  <table style="width:100%">
+    <tr>
+      <th>Number</th>
+      <th>Titre</th>
+      <th>Genre</th>
+      <th>Duration</th>
+    </tr>
+    <tr>
+      <td>{{film_toshow.number_f}}</td>
+      <td>{{film_toshow.title}}</td>
+      <td>{{film_toshow.genre}}</td>
+      <td>{{film_toshow.duration}}</td>
+    </tr>
+  </table> 
 </div>
